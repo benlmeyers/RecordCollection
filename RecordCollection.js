@@ -31,4 +31,7 @@ class Record extends React.Component {
   }
 };
 
-ReactDOM.render(<RecordCollection records={['Johnny Cash', 'Dave Brubeck', 'The Band']}/>, document.getElementById('app'));
+ReactDOM.render(
+  <RecordCollection
+    records={['Johnny Cash', 'Dave Brubeck', 'The Band']}
+  />, document.getElementById('app'));
