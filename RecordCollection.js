@@ -6,6 +6,8 @@ const RecordCollection = (props) => (
     )}
   </ul>
 );
+
+
 class Record extends React.Component {
   constructor (props) {
     super(props)
@@ -15,23 +17,27 @@ class Record extends React.Component {
     this.onListItemClick = this.onListItemClick.bind(this);
   }
 
+
   onListItemClick() {
     this.setState({
       listenedTo: !this.state.listenedTo,
     });
   }
+
+
   render () {
     var style = {
       textDecoration: this.state.listenedTo ? 'line-through' : 'none',
     };
-
     return (
       <li style={style} onClick={this.onListItemClick}>{this.props.item}</li>
     )
   }
 };
 
+
 ReactDOM.render(
   <RecordCollection
     records={['Johnny Cash', 'Dave Brubeck', 'The Band']}
   />, document.getElementById('app'));
+
