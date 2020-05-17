@@ -26,7 +26,7 @@ class Record extends React.Component {
 
 
   render () {
-    var style = {
+    let style = {
       textDecoration: this.state.listenedTo ? 'line-through' : 'none',
     };
     return (
